@@ -1,10 +1,10 @@
 //*****************************************************************************
-// main.c for A/D and D/A
+// main.c for Snake
 // Author: Parker and Harry
-//Modified by Allie
 //*****************************************************************************
 #include "lab_buttons.h"
 #include <stdlib.h>
+#include <time.h>
 
 /******************************************************************************
  * Global Variables
@@ -13,7 +13,7 @@
 #define SCREEN_WIDTH 240
 #define FPS 20 // frames per second
 #define BLOCK_SIZE 10
-#define MAX_LENGTH 10
+#define MAX_LENGTH 40
 #define SNAKE_COLOR LCD_COLOR_GREEN
 #define APPLE_COLOR LCD_COLOR_RED
 void shift(int arr[MAX_LENGTH][2]);
@@ -38,6 +38,8 @@ int main(void)
 	// Previous snake positions
 
 	int coords[MAX_LENGTH][2] = {{1,1}};
+	
+	//srand(time(0));
 
 	
 	// Direction: 0: up, 1: right, 2: down, 3: left
